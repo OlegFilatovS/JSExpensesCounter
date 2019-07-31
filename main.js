@@ -66,21 +66,24 @@ var appData = {
         } else {
             this.chooseIncome();
         } 
-            this.income.forEach(element => { 
-                alert("Методы доп заработка:"+ element); 
+            this.income.forEach(function(item,i) { 
+                alert("Методы доп заработка:"+ (i+1) +" "+ item); 
             });
 
         },
 
         printSelf: function() {
-            for (const key in this) {
-                alert("Наша программа включает в себя данные:" + key );
+            for (let key in this) {
+                alert("Наша программа включает в себя данные:" + key + " с значением" + this[key] );
             }
         }
 
 };
 
 appData.printSelf();
+
+
+
 
 
 
