@@ -1,5 +1,28 @@
 let money = +prompt("Ваш бюджет на месяц?");
 let time = prompt("Введите дату в формате YYYY-MM-DD");
+let beginCalcBtn = document.getElementById('start'); //получить начать расчет через id
+let budgetVal = document.querySelector('.main .result .budget-value');
+let daybudgetVal = document.querySelector('.main .result .daybudget-value');
+let expensesVal = document.querySelector('.main .result .expenses-value');
+let optionalExpensesVal = document.querySelector('.main .result .optionalexpenses-value');
+let incomeVal = document.querySelector('.main .result .income-value');
+let monthSavingsVal = document.querySelector('.main .result .monthsavings-value');
+let yearSavingsVal = document.querySelector('.main .result .yearsavings-value');
+let buttons = document.getElementsByTagName('button');
+let approveExpensesBtn = buttons[0];
+let approveOptExpensesBtn = buttons[1];
+let CalculateBtn = buttons[2];
+let expenses = document.getElementsByClassName('expenses-item');
+let optionalExpenses = document.querySelectorAll('.optionalexpenses-item');
+let possibleExpenses = document.querySelector('.choose-income');
+
+let checkbox = document.querySelector('#savings');
+let summ = document.querySelector('.choose-sum');
+let procent = document.querySelector('.choose-percent');
+let year = document.querySelector('.year');
+let month = document.querySelector('.month');
+let day = document.querySelector('.day');
+
 
 var appData = {
         budget: money,
@@ -78,9 +101,7 @@ var appData = {
             }
         }
 
-};
-
-appData.printSelf();
+};111
 
 
 
